@@ -30,7 +30,7 @@ type pageIcons struct {
 	importedAccountIcon, accountIcon, editIcon, expandIcon, copyIcon, mixer,
 	arrowForwardIcon, transactionFingerPrintIcon, settingsIcon, securityIcon, helpIcon,
 	aboutIcon, debugIcon, verifyMessageIcon, locationPinIcon, alertGray, arrowDownIcon,
-	watchOnlyWalletIcon *widget.Image
+	watchOnlyWalletIcon, rescan *widget.Image
 
 	walletIcon, syncingIcon image.Image
 }
@@ -138,6 +138,7 @@ func (win *Window) addPages(decredIcons map[string]image.Image) {
 		alertGray:                  &widget.Image{Src: paint.NewImageOp(decredIcons["alert-gray"])},
 		arrowDownIcon:              &widget.Image{Src: paint.NewImageOp(decredIcons["arrow_down"])},
 		watchOnlyWalletIcon:        &widget.Image{Src: paint.NewImageOp(decredIcons["watch_only_wallet"])},
+		rescan:                     &widget.Image{Src: paint.NewImageOp(decredIcons["rescan"])},
 
 		syncingIcon: decredIcons["syncing"],
 		walletIcon:  decredIcons["wallet"],
